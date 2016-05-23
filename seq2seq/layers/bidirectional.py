@@ -1,13 +1,13 @@
 from __future__ import division
 from keras import backend as K
-from keras.layers.core import MaskedLayer
+from keras.layers.core import Masking
 try:
     import cPickle as pickle
 except ImportError:
     import pickle
 
 
-class Bidirectional(MaskedLayer):
+class Bidirectional(Masking):
     ''' Bidirectional wrapper for RNNs
 
     # Arguments:
